@@ -10,6 +10,6 @@ app.http("getDegreeOptions", {
   authLevel: "anonymous",
   route: "degrees",
   handler: () => {
-    return { body: "nice!" };
+    return { body: "testing!" };
   },
 });
