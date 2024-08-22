@@ -1,15 +1,14 @@
-import {
-  HttpRequest,
-  InvocationContext,
-  HttpResponseInit,
-} from "@azure/functions";
+import { HttpRequest, InvocationContext } from "@azure/functions";
+import courseRepository from "../../repository/courseRepository";
+import handler from "../handler";
+import { Course } from "../../model/course";
 
-export async function getCourseDetails(
+const getCourseDetails = async (
   request: HttpRequest,
   context: InvocationContext
-): Promise<HttpResponseInit> {
-  const courseCode = request.params.courseCode;
-  return {
-    body: `Get Course Details for Course ${courseCode}`,
-  };
-}
+): Promise<Course> => {
+  const { courseCode } = request.params;
+  return await courseRepository.get(courseCode);
+};
+
+export default handler(getCourseDetails);

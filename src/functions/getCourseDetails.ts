@@ -1,5 +1,5 @@
 import { app } from "@azure/functions";
-import { getCourseDetails } from "../handler/user/getCourseDetails";
+import getCourseDetails from "../handler/user/getCourseDetails";
 
 app.http("getCourseDetails", {
   methods: ["GET"],

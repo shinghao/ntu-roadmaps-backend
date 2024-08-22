@@ -1,0 +1,93 @@
+[
+  {
+    "school": "School of Computer Science and Engineering",
+    "degree": "Computer Engineering",
+    "cohorts": {
+      "2021": ["Normal", "Polytechnic", "Accelerated Bachelor"],
+      "2022": [
+        "Normal",
+        "Polytechnic (PI)",
+        "Polytechnic (PA)",
+        "Accelerated Bachelor"
+      ],
+      "2023": [
+        "Normal",
+        "Polytechnic (PI)",
+        "Polytechnic (PA)",
+        "Accelerated Bachelor"
+      ],
+      "2024": [
+        "Normal",
+        "Polytechnic (PI)",
+        "Polytechnic (PA)",
+        "Accelerated Bachelor"
+      ]
+    }
+  },
+  {
+    "school": "School of Computer Science and Engineering",
+    "degree": "Computer Science",
+    "cohorts": {
+      "2021": ["Normal", "Polytechnic", "Accelerated Bachelor"],
+      "2022": [
+        "Normal",
+        "Polytechnic (PI)",
+        "Polytechnic (PA)",
+        "Accelerated Bachelor"
+      ],
+      "2023": [
+        "Normal",
+        "Polytechnic (PI)",
+        "Polytechnic (PA)",
+        "Accelerated Bachelor",
+        "Accelerated Bachelor"
+      ],
+      "2024": ["Normal", "Polytechnic (PI)", "Polytechnic (PA)"]
+    }
+  },
+  {
+    "school": "School of Computer Science and Engineering",
+    "degree": "Data Science and Artificial Intelligence",
+    "cohorts": {
+      "2021": ["Normal"],
+      "2022": ["Normal"],
+      "2023": ["Normal"],
+      "2024": ["Normal"]
+    }
+  },
+  {
+    "school": "School of Computer Science and Engineering",
+    "degree": "Double Degree in Computer Science and Business",
+    "cohorts": { "2021": ["Normal"], "2022": [], "2023": ["Normal"], "2024": ["Normal"] }
+  },
+  {
+    "school": "School of Computer Science and Engineering",
+    "degree": "Double Degree in Computer Engineering and Business",
+    "cohorts": {
+      "2021": ["Normal"],
+      "2022": ["Normal"],
+      "2023": ["Normal"],
+      "2024": ["Normal"]
+    }
+  },
+  {
+    "school": "School of Computer Science and Engineering",
+    "degree": "Double Degree in Computer Science and Economics",
+    "cohorts": {
+      "2021": ["Normal (PI)", "Normal (PA)"],
+      "2022": ["Normal (PI)", "Normal (PA)"],
+      "2023": ["Normal (PI)", "Normal (PA)"],
+      "2024": ["Normal (PI)", "Normal (PA)"]
+    }
+  },
+  {
+    "school": "School of Computer Science and Engineering",
+    "degree": "Double Degree in Computer Engineering and Economics",
+    "cohorts": {
+      "2021": ["Normal (PI)", "Normal (PA)"],
+      "2022": ["Normal (PI)", "Normal (PA)"],
+      "2023": ["Normal (PI)", "Normal (PA)"],
+      "2024": ["Normal (PI)", "Normal (PA)"]
+    }
+  }
+]

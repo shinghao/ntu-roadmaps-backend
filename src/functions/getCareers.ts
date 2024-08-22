@@ -1,5 +1,5 @@
 import { app } from "@azure/functions";
-import { getCareers } from "../handler/user/getCareers";
+import getCareers from "../handler/user/getCareers";
 
 app.http("getCareers", {
   methods: ["GET"],

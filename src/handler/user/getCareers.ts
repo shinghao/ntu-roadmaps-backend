@@ -1,13 +1,14 @@
-import {
-  HttpRequest,
-  InvocationContext,
-  HttpResponseInit,
-} from "@azure/functions";
+import { HttpRequest, InvocationContext } from "@azure/functions";
+import careerRepository from "../../repository/careerRepository";
+import handler from "../handler";
+import { Career } from "../../model/career";
 
-export async function getCareers(
+const getCareers = async (
   request: HttpRequest,
   context: InvocationContext
-): Promise<HttpResponseInit> {
+): Promise<Career[]> => {
   const degree = request.params.degree;
-  return { body: `Get Careers for Degree ${degree}` };
-}
+  return await careerRepository.get(degree);
+};
+
+export default handler(getCareers);

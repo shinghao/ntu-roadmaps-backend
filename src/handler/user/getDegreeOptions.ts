@@ -1,12 +1,13 @@
-import {
-  HttpRequest,
-  InvocationContext,
-  HttpResponseInit,
-} from "@azure/functions";
+import { HttpRequest, InvocationContext } from "@azure/functions";
+import degreeRepository from "../../repository/degreeRepository";
+import handler from "../handler";
+import { DegreePrograms } from "../../model/degree";
 
-export async function getDegreeOptions(
+const getDegreeOptions = async (
   request: HttpRequest,
   context: InvocationContext
-): Promise<HttpResponseInit> {
-  return { body: `Degree Options are here!` };
-}
+): Promise<DegreePrograms> => {
+  return await degreeRepository.get();
+};
+
+export default handler(getDegreeOptions);

@@ -5,6 +5,8 @@
     "outDir": "dist",
     "rootDir": ".",
     "sourceMap": true,
-    "strict": false
+    "strict": true,
+    "resolveJsonModule": true, // TODO: remove once don't need to import json
+    "esModuleInterop": true // TODO: remove once don't need to import json
   }
 }

@@ -1,0 +1,269 @@
+[
+  {
+    "career": "Cyber Security",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": [
+      "SC3010",
+      "SC4010",
+      "SC4011",
+      "SC4012",
+      "SC4013",
+      "SC4014",
+      "SC4015",
+      "SC4016"
+    ]
+  },
+  {
+    "career": "Software Engineer",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": [
+      "SC4012",
+      "SC4013",
+      "SC3020",
+      "SC3030",
+      "SC3040",
+      "SC3050",
+      "SC3060",
+      "SC3061",
+      "SC4040",
+      "SC4050",
+      "SC4051",
+      "SC4052",
+      "SC4242"
+    ]
+  },
+  {
+    "career": "Full-stack Developer",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Front-End Engineer / Web Developer",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Backend Engineer",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Data Engineer",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Business Analyst",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Firmware Engineer",
+    "degrees": [
+      "Computer Engineering",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Computer Hardware Engineer",
+    "degrees": [
+      "Computer Engineering",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Embedded System Developer",
+    "degrees": [
+      "Computer Engineering",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "AI Engineer",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": ["SC3000", "SC4000", "SC4001", "SC4002", "SC4003", "SC4061"]
+  },
+  {
+    "career": "Machine Learning Engineer",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": ["SC3000", "SC4000", "SC4001", "SC4002", "SC4003", "SC4061"]
+  },
+  {
+    "career": "Data Scientist",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": ["SC3000", "SC4000", "SC4001", "SC4002", "SC4003", "SC4061"]
+  },
+  {
+    "career": "Data Analyst",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "AI Scientist",
+    "degrees": ["Data Science and Artificial Intelligence"],
+    "electives": ["SC3000", "SC4000", "SC4001", "SC4002", "SC4003", "SC4061"]
+  },
+  {
+    "career": "System Architect",
+    "degrees": [
+      "Computer Engineering",
+      "Double Degree in Computer Engineering and Business"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Cybersecurity Consultant/Analyst",
+    "degrees": ["Double Degree in Computer Science and Business"],
+    "electives": []
+  },
+  {
+    "career": "Product Manager",
+    "degrees": [
+      "Computer Science",
+      "Computer Engineering",
+      "Data Science and Artificial Intelligence",
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business",
+      "Double Degree in Computer Science and Economics",
+      "Double Degree in Computer Engineering and Economics"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Entrepreneur",
+    "degrees": [
+      "Double Degree in Computer Science and Business",
+      "Double Degree in Computer Engineering and Business"
+    ],
+    "electives": []
+  },
+  {
+    "career": "Quantitative Analyst",
+    "degrees": ["Double Degree in Computer Science and Economics"],
+    "electives": []
+  },
+  {
+    "career": "Economic Modeler",
+    "degrees": ["Double Degree in Computer Science and Economics"],
+    "electives": []
+  },
+  {
+    "career": "Quantitative Developer",
+    "degrees": ["Double Degree in Computer Science and Economics"],
+    "electives": []
+  },
+  {
+    "career": "Financial Engineer",
+    "degrees": ["Double Degree in Computer Engineering and Economics"],
+    "electives": []
+  },
+  {
+    "career": "Economic Systems Designer",
+    "degrees": ["Double Degree in Computer Engineering and Economics"],
+    "electives": []
+  },
+  {
+    "career": "Tech-focused Economic Consultant",
+    "degrees": ["Double Degree in Computer Engineering and Economics"],
+    "electives": []
+  },
+  {
+    "career": "Operations Research Analyst",
+    "degrees": ["Double Degree in Computer Engineering and Economics"],
+    "electives": []
+  }
+]
