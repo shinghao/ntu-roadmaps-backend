@@ -4,6 +4,6 @@ import getAllCourses from "../handler/admin/getAllCourses";
 app.http("getAllCourses", {
   methods: ["GET"],
   authLevel: "anonymous",
-  route: "courses",
+  route: "courses/all",
   handler: getAllCourses,
 });

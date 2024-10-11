@@ -4,6 +4,6 @@ import getAllCareers from "../handler/admin/getAllCareers";
 app.http("getAllCareers", {
   methods: ["GET"],
   authLevel: "anonymous",
-  route: "careers",
+  route: "careers/all",
   handler: getAllCareers,
 });
