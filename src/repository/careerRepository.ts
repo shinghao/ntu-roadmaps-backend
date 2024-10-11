@@ -13,4 +13,9 @@ const get = async (degree: string): Promise<Career[]> => {
   return Promise.resolve(careersFound || []);
 };
 
-export default { get };
+const getAll = async (): Promise<Career[]> => {
+  // TODO: Add mongoDB code
+  return Promise.resolve(careersJson);
+};
+
+export default { get, getAll };

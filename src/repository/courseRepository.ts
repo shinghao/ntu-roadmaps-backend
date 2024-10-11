@@ -23,4 +23,8 @@ const getCourses = (courseCodes: string[]): Promise<Course[]> => {
   return new Promise((resolve) => resolve(coursesFound || []));
 };
 
-export default { get, getCourses };
+const getAll = (): Promise<Course[]> => {
+  return new Promise((resolve) => resolve(coursesJson));
+};
+
+export default { get, getCourses, getAll };

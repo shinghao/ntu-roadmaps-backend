@@ -16,4 +16,8 @@ const get = async (degree: string, cohort: string, degreeType: string) => {
   return Promise.resolve(roadmap);
 };
 
-export default { get };
+const getAll = async () => {
+  return Promise.resolve(roadmapJson);
+};
+
+export default { get, getAll };
