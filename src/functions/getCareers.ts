@@ -1,9 +1,9 @@
 import { app } from "@azure/functions";
-import getCareers from "../handler/user/getCareers";
+import getCareers from "../handler/admin/getCareers";
 
 app.http("getCareers", {
   methods: ["GET"],
   authLevel: "anonymous",
-  route: "careers/{degree}",
+  route: "careers",
   handler: getCareers,
 });

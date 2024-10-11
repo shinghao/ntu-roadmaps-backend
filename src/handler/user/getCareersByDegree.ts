@@ -3,7 +3,7 @@ import careerRepository from "../../repository/careerRepository";
 import handler from "../handler";
 import { Career } from "../../model/career";
 
-const getCareers = async (
+const getCareersByDegree = async (
   request: HttpRequest,
   context: InvocationContext
 ): Promise<Career[]> => {
@@ -11,4 +11,4 @@ const getCareers = async (
   return await careerRepository.get(degree);
 };
 
-export default handler(getCareers);
+export default handler(getCareersByDegree);

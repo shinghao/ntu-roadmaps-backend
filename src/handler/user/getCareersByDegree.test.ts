@@ -1,6 +1,6 @@
 import { HttpRequest, InvocationContext } from "@azure/functions";
 import careersJson from "../../mockData/careers.json";
-import getCareers from "./getCareers";
+import getCareersByDegree from "./getCareersByDegree";
 
 test("valid degree should return career options", async () => {
   const degree = "Computer Science";
@@ -9,7 +9,7 @@ test("valid degree should return career options", async () => {
   );
   const request = { params: { degree } } as unknown as HttpRequest;
   const context = {} as unknown as InvocationContext;
-  const result = await getCareers(request, context);
+  const result = await getCareersByDegree(request, context);
 
   expect(result).toStrictEqual({ body: JSON.stringify(careerFound) });
 });
