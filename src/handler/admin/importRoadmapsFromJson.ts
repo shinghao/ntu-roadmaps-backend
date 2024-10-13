@@ -1,6 +1,6 @@
 import { HttpRequest, InvocationContext } from "@azure/functions";
 import handler from "../handler";
-import { importFromJson } from "../../utils/importFromJson";
+import importFromJson from "../../utils/importFromJson";
 import roadmapRepository from "../../repository/roadmapRepository";
 import { roadmapSchema } from "../../schemas/roadmap";
 

@@ -1,6 +1,6 @@
 import { HttpRequest, InvocationContext } from "@azure/functions";
 import handler from "../handler";
-import { importFromJson } from "../../utils/importFromJson";
+import importFromJson from "../../utils/importFromJson";
 import { degreeSchema } from "../../schemas/degree";
 import degreeRepository from "../../repository/degreeRepository";
 
