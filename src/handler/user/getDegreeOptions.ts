@@ -7,7 +7,7 @@ const getDegreeOptions = async (
   request: HttpRequest,
   context: InvocationContext
 ): Promise<DegreePrograms> => {
-  return await degreeRepository.get();
+  return await degreeRepository.getAll();
 };
 
 export default handler(getDegreeOptions);

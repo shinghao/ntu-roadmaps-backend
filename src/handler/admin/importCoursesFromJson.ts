@@ -4,7 +4,7 @@ import { courseSchema } from "../../schemas/course";
 import { importFromJson } from "../../utils/importFromJson";
 import courseRepository from "../../repository/courseRepository";
 
-const importJsonCourses = async (
+const importCoursesFromJson = async (
   request: HttpRequest,
   context: InvocationContext
 ): Promise<boolean> => {
@@ -13,4 +13,4 @@ const importJsonCourses = async (
   return true;
 };
 
-export default handler(importJsonCourses);
+export default handler(importCoursesFromJson);

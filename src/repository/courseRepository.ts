@@ -5,26 +5,30 @@ import { coursesContainer } from "./cosmosClient";
 import { v4 as uuidv4 } from "uuid";
 import { OperationInput } from "@azure/cosmos";
 
-const get = (courseCode: string): Promise<Course> => {
-  // TODO: Connect to azure cosmosDB
-  const courseFound = coursesJson.find(
-    (course) => course.courseCode === courseCode
-  );
+const get = async (courseCode: string): Promise<Course> => {
+  const { resources: coursesFound } = await coursesContainer.items
+    .query({
+      query: `SELECT * FROM c WHERE c.courseCode = @courseCode`,
+      parameters: [{ name: "@courseCode", value: courseCode }],
+    })
+    .fetchAll();
 
-  if (!courseFound) {
+  if (!coursesFound || coursesFound.length === 0) {
     throw new NotFoundError();
   }
 
-  return new Promise((resolve) => resolve(courseFound));
+  return coursesFound[0];
 };
 
-// TODO: Connect to azure cosmosDB
-const getCourses = (courseCodes: string[]): Promise<Course[]> => {
-  const coursesFound = coursesJson.filter((course) =>
-    courseCodes.includes(course.courseCode)
-  );
+const getCourses = async (courseCodes: string[]): Promise<Course[]> => {
+  const { resources: coursesFound } = await coursesContainer.items
+    .query({
+      query: `SELECT * FROM c WHERE c.courseCode IN (@courseCodes)`,
+      parameters: [{ name: "@courseCodes", value: courseCodes }],
+    })
+    .fetchAll();
 
-  return new Promise((resolve) => resolve(coursesFound || []));
+  return coursesFound || [];
 };
 
 const getAll = async (): Promise<Course[]> => {
