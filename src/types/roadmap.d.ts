@@ -1,17 +1,23 @@
+import { z } from "zod";
+import { yearSemesterSchema, roadmapSchema } from "../schemas/roadmap";
+
+// This is after adding au, title, prerequisite to course in roadmap
 export interface CourseInRoadmap {
-  courseCode: string;
+  au: number;
+  title: string;
   prerequisites: string[][];
 }
 
-interface YearSemester {
-  year: number;
-  semester: number;
-  courses: CourseInRoadmap[];
-}
-
-export interface Roadmap {
+export interface GetRoadmapResponse {
   degree: string;
   cohort: string;
   type?: string;
-  coursesByYearSemester: YearSemester[];
+  coursesByYearSemester: {
+    year: number;
+    semester: number;
+    courses: CourseInRoadmap[];
+  }[];
 }
+
+export type YearSemester = z.infer<typeof yearSemesterSchema>;
+export type Roadmap = z.infer<typeof roadmapSchema>;

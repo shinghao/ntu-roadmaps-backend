@@ -2,12 +2,12 @@ import { HttpRequest, InvocationContext } from "@azure/functions";
 import roadmapRepository from "../../repository/roadmapRepository";
 import courseRepository from "../../repository/courseRepository";
 import handler from "../handler";
-import { Roadmap } from "../../types/roadmap";
+import { GetRoadmapResponse } from "../../types/roadmap";
 
 const getRoadmap = async (
   request: HttpRequest,
   context: InvocationContext
-): Promise<Roadmap> => {
+): Promise<object> => {
   const degree = request.params.degree;
   const cohort = request.params.cohort;
   const type = request.params.type;
