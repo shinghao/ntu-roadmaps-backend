@@ -3,7 +3,7 @@ import type { Career } from "../model/career";
 import careersJson from "../mockData/careers.json";
 
 const get = async (degree: string): Promise<Career[]> => {
-  // TODO: Add mongoDB code
+  // TODO:
   const careersFound = careersJson.filter((career) =>
     career.degrees.includes(degree)
   );
@@ -14,7 +14,7 @@ const get = async (degree: string): Promise<Career[]> => {
 };
 
 const getAll = async (): Promise<Career[]> => {
-  // TODO: Add mongoDB code
+  // TODO:
   return Promise.resolve(careersJson);
 };
 

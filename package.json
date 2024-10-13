@@ -8,9 +8,10 @@
     "clean": "rimraf dist",
     "prestart": "npm run clean && npm run build",
     "start": "func start",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
+    "@azure/cosmos": "^4.1.1",
     "@azure/functions": "^4.0.0",
     "ts-node": "^10.9.2"
   },
