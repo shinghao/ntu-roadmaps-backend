@@ -1,7 +1,7 @@
 import { HttpRequest, InvocationContext } from "@azure/functions";
 import careerRepository from "../../repository/careerRepository";
 import handler from "../handler";
-import { Career } from "../../model/career";
+import { Career } from "../../types/career";
 
 const getCareersByDegree = async (
   request: HttpRequest,

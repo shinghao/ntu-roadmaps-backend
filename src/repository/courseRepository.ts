@@ -1,7 +1,9 @@
 import coursesJson from "../mockData/courses.json";
-import type { Course } from "../model/course";
+import type { Course } from "../schemas/course";
 import { NotFoundError } from "../error";
 import { coursesContainer } from "./cosmosClient";
+import { v4 as uuidv4 } from "uuid";
+import { OperationInput } from "@azure/cosmos";
 
 const get = (courseCode: string): Promise<Course> => {
   // TODO: Connect to azure cosmosDB
@@ -32,4 +34,15 @@ const getAll = async (): Promise<Course[]> => {
   return courses;
 };
 
-export default { get, getCourses, getAll };
+const insertMany = async (courses: Course[]): Promise<void> => {
+  const operations: OperationInput[] = courses.map((course) => ({
+    operationType: "Create",
+    resourceBody: {
+      ...course,
+    },
+    id: uuidv4(),
+  }));
+  await coursesContainer.items.bulk(operations);
+};
+
+export default { get, getCourses, getAll, insertMany };

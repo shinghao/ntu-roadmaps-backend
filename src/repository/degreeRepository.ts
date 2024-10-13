@@ -1,5 +1,5 @@
 import { NotFoundError } from "../error";
-import type { DegreePrograms } from "../model/degree";
+import type { DegreePrograms } from "../types/degree";
 import degreeProgrammesJson from "../mockData/degreeProgrammes.json";
 
 const get = (): Promise<DegreePrograms> => {
@@ -11,4 +11,8 @@ const get = (): Promise<DegreePrograms> => {
   return Promise.resolve(degreeProgramsFound);
 };
 
-export default { get };
+const insertMany = async () => {
+  return Promise.resolve(true);
+};
+
+export default { get, insertMany };

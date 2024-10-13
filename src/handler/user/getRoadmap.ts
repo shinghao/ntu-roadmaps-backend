@@ -2,7 +2,7 @@ import { HttpRequest, InvocationContext } from "@azure/functions";
 import roadmapRepository from "../../repository/roadmapRepository";
 import courseRepository from "../../repository/courseRepository";
 import handler from "../handler";
-import { Roadmap } from "../../model/roadmap";
+import { Roadmap } from "../../types/roadmap";
 
 const getRoadmap = async (
   request: HttpRequest,

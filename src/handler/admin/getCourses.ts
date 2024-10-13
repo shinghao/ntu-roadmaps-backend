@@ -1,7 +1,7 @@
 import { HttpRequest, InvocationContext } from "@azure/functions";
 import courseRepository from "../../repository/courseRepository";
 import handler from "../handler";
-import { Course } from "../../model/course";
+import { Course } from "../../schemas/course";
 
 const getCourses = async (
   request: HttpRequest,

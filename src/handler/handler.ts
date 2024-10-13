@@ -5,14 +5,15 @@ import {
   HttpRequest,
   HttpResponseInit,
 } from "@azure/functions";
-import { HttpStatusCode } from "../model/error";
+import { HttpStatusCode } from "../types/error";
+import { BadRequestError } from "../error";
 
 interface ErrorInfo {
   statusCode: HttpStatusCode;
 }
 
 const errorMap: { [key: string]: ErrorInfo } = Object.freeze({
-  ValidationError: {
+  BadRequestError: {
     statusCode: HttpStatusCode.BAD_REQUEST,
   },
   NotFoundError: {
