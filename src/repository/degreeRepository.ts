@@ -1,6 +1,5 @@
 import { NotFoundError } from "../error";
 import type { DegreeProgram, DegreePrograms } from "../types/degree";
-import degreeProgrammesJson from "../mockData/degreeProgrammes.json";
 import { degreesContainer } from "./cosmosClient";
 import { OperationInput } from "@azure/cosmos";
 import { v4 as uuidv4 } from "uuid";

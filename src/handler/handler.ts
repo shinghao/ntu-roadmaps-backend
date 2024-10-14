@@ -6,7 +6,6 @@ import {
   HttpResponseInit,
 } from "@azure/functions";
 import { HttpStatusCode } from "../types/error";
-import { BadRequestError } from "../error";
 
 interface ErrorInfo {
   statusCode: HttpStatusCode;

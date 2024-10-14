@@ -1,4 +1,3 @@
-import coursesJson from "../mockData/courses.json";
 import type { Course } from "../schemas/course";
 import { NotFoundError } from "../error";
 import { coursesContainer } from "./cosmosClient";
