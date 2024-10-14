@@ -27,4 +27,13 @@ const insertMany = async (courses: DegreeProgram[]): Promise<void> => {
   await degreesContainer.items.bulk(operations);
 };
 
-export default { getAll, insertMany };
+const deleteOne = async (id: string): Promise<boolean> => {
+  const { resource: deletedItem } = await degreesContainer.item(id).delete();
+
+  if (!deletedItem) {
+    return false;
+  }
+  return true;
+};
+
+export default { getAll, insertMany, deleteOne };

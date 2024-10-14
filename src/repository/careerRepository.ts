@@ -36,4 +36,13 @@ const insertMany = async (careers: Career[]): Promise<void> => {
   await careersContainer.items.bulk(operations);
 };
 
-export default { get, getAll, insertMany };
+const deleteOne = async (id: string): Promise<boolean> => {
+  const { resource: deletedItem } = await careersContainer.item(id).delete();
+
+  if (!deletedItem) {
+    return false;
+  }
+  return true;
+};
+
+export default { get, getAll, insertMany, deleteOne };

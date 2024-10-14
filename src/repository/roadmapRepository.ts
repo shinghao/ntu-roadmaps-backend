@@ -49,4 +49,13 @@ const insertMany = async (roadmaps: Roadmap[]): Promise<void> => {
   await roadmapsContainer.items.bulk(operations);
 };
 
-export default { get, getAll, insertMany };
+const deleteOne = async (id: string): Promise<boolean> => {
+  const { resource: deletedItem } = await roadmapsContainer.item(id).delete();
+
+  if (!deletedItem) {
+    return false;
+  }
+  return true;
+};
+
+export default { get, getAll, insertMany, deleteOne };
