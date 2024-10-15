@@ -48,15 +48,27 @@ const insertMany = async (courses: Course[]): Promise<void> => {
   await coursesContainer.items.bulk(operations);
 };
 
-const deleteOne = async (id: string): Promise<boolean> => {
+const deleteOne = async (courseCode: string): Promise<boolean> => {
   try {
-    const { resource: deletedItem } = await coursesContainer.item(id).delete();
-    if (!deletedItem) {
+    const query = {
+      query: "SELECT * FROM c WHERE c.courseCode = @courseCode",
+      parameters: [{ name: "@courseCode", value: courseCode }],
+    };
+    const { resources: courses } = await coursesContainer.items
+      .query(query)
+      .fetchAll();
+
+    if (!courses || courses.length === 0) {
       throw new Error();
     }
+
+    const courseToDelete = courses[0];
+    const { id } = courseToDelete;
+
+    await coursesContainer.item(id, courseCode).delete();
     return true;
   } catch (err) {
-    throw new NotFoundError(`Course ${id} not found`);
+    throw new NotFoundError(`Course ${courseCode} not found`);
   }
 };
 

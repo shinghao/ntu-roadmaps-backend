@@ -4,7 +4,7 @@ import { BadRequestError } from "../../error";
 import courseRepository from "../../repository/courseRepository";
 
 interface DeleteRequestBody {
-  id: string;
+  courseCode: string;
 }
 
 const deleteCourse = async (
@@ -12,12 +12,12 @@ const deleteCourse = async (
   context: InvocationContext
 ): Promise<boolean> => {
   const body: DeleteRequestBody = (await request.json()) as DeleteRequestBody;
-  const id = body?.id;
+  const courseCode = body?.courseCode;
 
-  if (!id) {
+  if (!courseCode) {
     throw new BadRequestError("Missing id");
   }
-  return await courseRepository.deleteOne(id);
+  return await courseRepository.deleteOne(courseCode);
 };
 
 export default handler(deleteCourse);
