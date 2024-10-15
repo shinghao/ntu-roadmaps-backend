@@ -1,7 +1,7 @@
 import { app } from "@azure/functions";
 import deleteRoadmap from "../handler/admin/deleteRoadmap";
 
-app.http("deleteCourse", {
+app.http("deleteRoadmap", {
   methods: ["DELETE"],
   authLevel: "anonymous",
   route: "roadmap",
