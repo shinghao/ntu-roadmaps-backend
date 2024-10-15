@@ -53,11 +53,11 @@ const deleteOne = async (id: string): Promise<boolean> => {
   try {
     const { resource: deletedItem } = await roadmapsContainer.item(id).delete();
     if (!deletedItem) {
-      throw new NotFoundError();
+      throw new Error();
     }
     return true;
   } catch (err) {
-    throw new NotFoundError();
+    throw new NotFoundError(`Roadmap ${id} not found`);
   }
 };
 

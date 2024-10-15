@@ -52,11 +52,11 @@ const deleteOne = async (id: string): Promise<boolean> => {
   try {
     const { resource: deletedItem } = await coursesContainer.item(id).delete();
     if (!deletedItem) {
-      throw new NotFoundError();
+      throw new Error();
     }
     return true;
   } catch (err) {
-    throw new NotFoundError();
+    throw new NotFoundError(`Course ${id} not found`);
   }
 };
 
