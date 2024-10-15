@@ -49,13 +49,15 @@ const insertMany = async (courses: Course[]): Promise<void> => {
 };
 
 const deleteOne = async (id: string): Promise<boolean> => {
-  const { resource: deletedItem } = await coursesContainer.item(id).delete();
-
-  if (!deletedItem) {
-    return false;
+  try {
+    const { resource: deletedItem } = await coursesContainer.item(id).delete();
+    if (!deletedItem) {
+      throw new NotFoundError();
+    }
+    return true;
+  } catch (err) {
+    throw new NotFoundError();
   }
-
-  return true;
 };
 
 export default { get, getCourses, getAll, insertMany, deleteOne };

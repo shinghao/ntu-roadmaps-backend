@@ -1,7 +1,7 @@
 import { HttpRequest, InvocationContext } from "@azure/functions";
 import handler from "../handler";
-import { BadRequestError, NotFoundError } from "../../error";
-import roadmapRepository from "../../repository/roadmapRepository";
+import { BadRequestError } from "../../error";
+import courseRepository from "../../repository/courseRepository";
 
 interface DeleteRequestBody {
   id: string;
@@ -17,12 +17,7 @@ const deleteCourse = async (
   if (!id) {
     throw new BadRequestError("Missing id");
   }
-
-  const result = await roadmapRepository.deleteOne(id);
-  if (!result) {
-    throw new NotFoundError();
-  }
-  return true;
+  return await courseRepository.deleteOne(id);
 };
 
 export default handler(deleteCourse);

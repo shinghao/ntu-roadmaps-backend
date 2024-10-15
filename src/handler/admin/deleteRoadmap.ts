@@ -1,13 +1,13 @@
 import { HttpRequest, InvocationContext } from "@azure/functions";
-import careerRepository from "../../repository/careerRepository";
 import handler from "../handler";
-import { BadRequestError, NotFoundError } from "../../error";
+import { BadRequestError } from "../../error";
+import roadmapRepository from "../../repository/roadmapRepository";
 
 interface DeleteRequestBody {
   id: string;
 }
 
-const deleteCourse = async (
+const deleteRoadmap = async (
   request: HttpRequest,
   context: InvocationContext
 ): Promise<boolean> => {
@@ -17,12 +17,7 @@ const deleteCourse = async (
   if (!id) {
     throw new BadRequestError("Missing id");
   }
-
-  const result = await careerRepository.deleteOne(id);
-  if (!result) {
-    throw new NotFoundError();
-  }
-  return true;
+  return await roadmapRepository.deleteOne(id);
 };
 
-export default handler(deleteCourse);
+export default handler(deleteRoadmap);
