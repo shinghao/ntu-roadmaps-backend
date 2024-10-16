@@ -1,10 +1,11 @@
 import { HttpRequest, InvocationContext } from "@azure/functions";
 import careerRepository from "../../repository/careerRepository";
 import handler from "../handler";
-import { BadRequestError } from "../../error";
+import { BadRequestError, InternalServerError } from "../../error";
 
 interface DeleteRequestBody {
   id: string;
+  career: string;
 }
 
 const deleteCareer = async (
@@ -12,12 +13,12 @@ const deleteCareer = async (
   context: InvocationContext
 ): Promise<boolean> => {
   const body: DeleteRequestBody = (await request.json()) as DeleteRequestBody;
-  const id = body?.id;
+  const { id, career } = body;
 
-  if (!id) {
-    throw new BadRequestError("Missing id");
+  if (!id || !career) {
+    throw new BadRequestError();
   }
-  return await careerRepository.deleteOne(id);
+  return await careerRepository.deleteOne(id, career);
 };
 
 export default handler(deleteCareer);

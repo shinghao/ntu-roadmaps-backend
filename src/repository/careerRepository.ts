@@ -36,12 +36,9 @@ const insertMany = async (careers: Career[]): Promise<void> => {
   await careersContainer.items.bulk(operations);
 };
 
-const deleteOne = async (id: string): Promise<boolean> => {
+const deleteOne = async (id: string, career: string): Promise<boolean> => {
   try {
-    const { resource: deletedItem } = await careersContainer.item(id).delete();
-    if (!deletedItem) {
-      throw new Error();
-    }
+    await careersContainer.item(id, career).delete();
     return true;
   } catch (err) {
     throw new NotFoundError(`Career ${id} not found`);
