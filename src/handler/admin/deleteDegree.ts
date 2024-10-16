@@ -5,7 +5,7 @@ import degreeRepository from "../../repository/degreeRepository";
 
 interface DeleteRequestBody {
   id: string;
-  degreeName: string;
+  degree: string;
 }
 
 const deleteDegree = async (
@@ -13,12 +13,12 @@ const deleteDegree = async (
   context: InvocationContext
 ): Promise<boolean> => {
   const body: DeleteRequestBody = (await request.json()) as DeleteRequestBody;
-  const { id, degreeName } = body;
+  const { id, degree } = body;
 
-  if (!id || !degreeName) {
+  if (!id || !degree) {
     throw new BadRequestError();
   }
-  return await degreeRepository.deleteOne(id, degreeName);
+  return await degreeRepository.deleteOne(id, degree);
 };
 
 export default handler(deleteDegree);
