@@ -26,12 +26,9 @@ const insertMany = async (courses: DegreeProgram[]): Promise<void> => {
   await degreesContainer.items.bulk(operations);
 };
 
-const deleteOne = async (id: string): Promise<boolean> => {
+const deleteOne = async (id: string, degreeName: string): Promise<boolean> => {
   try {
-    const { resource: deletedItem } = await degreesContainer.item(id).delete();
-    if (!deletedItem) {
-      throw new Error();
-    }
+    await degreesContainer.item(id, degreeName).delete();
     return true;
   } catch (err) {
     throw new NotFoundError(`Degree ${id} not found`);

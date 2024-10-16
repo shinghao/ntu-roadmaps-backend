@@ -51,10 +51,7 @@ const insertMany = async (roadmaps: Roadmap[]): Promise<void> => {
 
 const deleteOne = async (id: string): Promise<boolean> => {
   try {
-    const { resource: deletedItem } = await roadmapsContainer.item(id).delete();
-    if (!deletedItem) {
-      throw new Error();
-    }
+    await roadmapsContainer.item(id, id).delete();
     return true;
   } catch (err) {
     throw new NotFoundError(`Roadmap ${id} not found`);
