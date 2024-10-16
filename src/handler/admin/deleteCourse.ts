@@ -15,7 +15,7 @@ const deleteCourse = async (
   const courseCode = body?.courseCode;
 
   if (!courseCode) {
-    throw new BadRequestError("Missing id");
+    throw new BadRequestError();
   }
   return await courseRepository.deleteOne(courseCode);
 };

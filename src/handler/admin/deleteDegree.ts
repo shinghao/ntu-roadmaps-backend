@@ -15,8 +15,8 @@ const deleteDegree = async (
   const body: DeleteRequestBody = (await request.json()) as DeleteRequestBody;
   const { id, degreeName } = body;
 
-  if (!id) {
-    throw new BadRequestError("Missing id");
+  if (!id || !degreeName) {
+    throw new BadRequestError();
   }
   return await degreeRepository.deleteOne(id, degreeName);
 };

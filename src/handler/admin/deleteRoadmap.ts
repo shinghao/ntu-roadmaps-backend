@@ -15,7 +15,7 @@ const deleteRoadmap = async (
   const id = body?.id;
 
   if (!id) {
-    throw new BadRequestError("Missing id");
+    throw new BadRequestError();
   }
   return await roadmapRepository.deleteOne(id);
 };
