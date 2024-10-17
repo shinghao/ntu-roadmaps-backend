@@ -31,8 +31,11 @@ const getCourses = async (courseCodes: string[]): Promise<Course[]> => {
 };
 
 const getAll = async (): Promise<Course[]> => {
+  const queryOptions = {
+    maxItemCount: 200,
+  };
   const { resources: courses } = await coursesContainer.items
-    .query("SELECT * FROM c")
+    .query("SELECT * FROM c", queryOptions)
     .fetchAll();
   return courses;
 };

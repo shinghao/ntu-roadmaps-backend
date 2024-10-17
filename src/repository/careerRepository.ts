@@ -19,8 +19,11 @@ const get = async (degree: string): Promise<Career[]> => {
 };
 
 const getAll = async (): Promise<Career[]> => {
+  const queryOptions = {
+    maxItemCount: 100,
+  };
   const { resources: careers } = await careersContainer.items
-    .query("SELECT * FROM c")
+    .query("SELECT * FROM c", queryOptions)
     .fetchAll();
   return careers;
 };

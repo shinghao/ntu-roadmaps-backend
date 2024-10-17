@@ -30,8 +30,11 @@ const get = async (
 };
 
 const getAll = async (): Promise<Roadmap[]> => {
+  const queryOptions = {
+    maxItemCount: 100,
+  };
   const { resources: roadmaps } = await roadmapsContainer.items
-    .query("SELECT * FROM c")
+    .query("SELECT * FROM c", queryOptions)
     .fetchAll();
 
   return roadmaps;

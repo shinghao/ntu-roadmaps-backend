@@ -5,8 +5,12 @@ import { OperationInput } from "@azure/cosmos";
 import { v4 as uuidv4 } from "uuid";
 
 const getAll = async (): Promise<DegreePrograms> => {
+  const queryOptions = {
+    maxItemCount: 100,
+  };
+
   const { resources: degreeProgramsFound } = await degreesContainer.items
-    .query("SELECT * FROM c")
+    .query("SELECT * FROM c", queryOptions)
     .fetchAll();
 
   if (!degreeProgramsFound || degreeProgramsFound.length === 0) {
