@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const courseSchema = z.object({
   courseCode: z.string(),
-  au: z.number().positive().int(),
+  au: z.number().int(),
   title: z.string(),
   description: z.string(),
   intendedLearningOutcomes: z.array(z.string()),
