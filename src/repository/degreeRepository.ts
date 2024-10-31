@@ -1,5 +1,6 @@
 import { NotFoundError } from "../error";
 import type { DegreeProgram, DegreePrograms } from "../types/degree";
+import batchInsert from "./batchInsert";
 import { degreesContainer } from "./cosmosClient";
 import { OperationInput } from "@azure/cosmos";
 import { v4 as uuidv4 } from "uuid";
@@ -20,14 +21,7 @@ const getAll = async (): Promise<DegreePrograms> => {
 };
 
 const insertMany = async (courses: DegreeProgram[]): Promise<void> => {
-  const operations: OperationInput[] = courses.map((course) => ({
-    operationType: "Create",
-    resourceBody: {
-      ...course,
-    },
-    id: uuidv4(),
-  }));
-  await degreesContainer.items.bulk(operations);
+  await batchInsert(degreesContainer, courses);
 };
 
 const deleteOne = async (id: string, degree: string): Promise<boolean> => {

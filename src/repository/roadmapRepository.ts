@@ -1,8 +1,7 @@
 import { NotFoundError } from "../error";
-import { OperationInput } from "@azure/cosmos";
-import { v4 as uuidv4 } from "uuid";
 import { roadmapsContainer } from "./cosmosClient";
 import { Roadmap } from "../types/roadmap";
+import batchInsert from "./batchInsert";
 
 const get = async (
   degree: string,
@@ -41,15 +40,7 @@ const getAll = async (): Promise<Roadmap[]> => {
 };
 
 const insertMany = async (roadmaps: Roadmap[]): Promise<void> => {
-  const operations: OperationInput[] = roadmaps.map((roadmap) => ({
-    operationType: "Create",
-    resourceBody: {
-      ...roadmap,
-      id: uuidv4(),
-    },
-  }));
-
-  await roadmapsContainer.items.bulk(operations);
+  await batchInsert(roadmapsContainer, roadmaps);
 };
 
 const deleteOne = async (id: string): Promise<boolean> => {
